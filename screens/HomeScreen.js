@@ -10,7 +10,7 @@ import * as Animatable from "react-native-animatable";
 
 import { HeroImage } from "../assets/index";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView className="flex-1 relative">
       {/* First Section */}
@@ -44,7 +44,7 @@ const HomeScreen = () => {
           className="w-full h-full mt-20"
         />
         <View className="absolute bottom-20 w-24 h-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Discover")}>
             <Animatable.View
               animation="pulse"
               easing="ease-in-out"
